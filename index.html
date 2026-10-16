@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A lightweight local web chat interface starter project.">
+  <title>Local Web Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">L</span><div><strong>LocalChat</strong><small>Private demo workspace</small></div></div>
+      <button id="newChatButton" class="new-chat">＋ New conversation</button>
+      <div class="sidebar-label">WORKSPACE</div>
+      <button class="conversation active" type="button"><span class="status-dot"></span> General chat</button>
+      <div class="sidebar-footer"><span class="avatar">Y</span><div><strong>Local user</strong><small>Stored in this browser</small></div></div>
+    </aside>
+    <section class="chat-panel">
+      <header class="topbar">
+        <div><div class="eyebrow">YOUR WORKSPACE</div><h1>General chat</h1></div>
+        <div class="local-badge"><span></span> Local demo</div>
+      </header>
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">✦</div>
+          <h2>A quieter space to think.</h2>
+          <p>This starter chat runs in your browser. Send a message to begin.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Help me plan my day">Help me plan my day <span>↗</span></button>
+            <button class="suggestion" data-prompt="Give me ideas for a new project">Brainstorm a project <span>↗</span></button>
+            <button class="suggestion" data-prompt="Explain how this chat app works">Explain this app <span>↗</span></button>
+          </div>
+        </div>
+      </div>
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="messageInput">Write a message</label>
+        <textarea id="messageInput" rows="1" placeholder="Write a message…" maxlength="4000" required></textarea>
+        <div class="composer-bottom"><span>Local demo · Messages stay in this browser</span><button id="sendButton" type="submit" aria-label="Send message">↑</button></div>
+      </form>
+      <p class="disclaimer">Starter project only. Messages are saved in this browser, not sent to other users.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
